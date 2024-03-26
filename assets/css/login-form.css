@@ -1,0 +1,83 @@
+.auth-form{
+  width: 668px;
+  height: 540px;
+  padding: 55px;
+  background-color: rgb(255, 255, 255);
+}
+.auth-form-title{
+  margin-bottom: 47px;
+  color: rgb(77 132 223);
+}
+.auth-form-text-label{
+  display: block;
+  margin-bottom: 14px;
+  color: rgb(115, 115, 115);
+  font-weight: 500;
+  letter-spacing: 3.2px;
+}
+.auth-form-text-input{
+  width: 100%;
+  height: 58px;
+  border: 0px solid transparent;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: rgb(219, 219, 219);
+}
+/* Замінемо стандартний чекбокс на власний */
+.auth-form-remember-me-checkbox{
+  display: none;
+}
+.additional-form-actions{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -6px;
+}
+/* Створюємо власний чекбокс */
+.auth-form-remember-me-label{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgb(160, 160, 160);
+  border-radius: 3px; 
+  margin: 0 10px 0 0;
+  background-color: rgb(219, 219, 219);
+  box-shadow: 1px 1px 2px rgb(255, 255, 255) inset;
+  cursor: pointer;
+  position: relative;
+}
+/* Cтавимо відмітку сhecked */
+.auth-form-remember-me-checkbox:checked 
++ .additional-form-actions .auth-form-remember-me-label::before{
+  content: "\2713";
+  position: absolute;
+  top: -3px;
+  left: 0;
+}
+/* Додаємо надпис селектором, щоб не задавати відступ пробілами */
+.auth-form-remember-me-label::after{
+  content: "Remember Me";
+  display: inline-block;
+  width: 100px;
+  margin-left: 28px;
+  color: rgb(115, 115, 115);
+}
+.auth-form-forgot-password-link{
+  /* хітбокси */
+  padding-top: 5px; 
+  padding-bottom: 5px;
+  color: rgb(53, 172, 202);
+  font-weight: 610;
+}
+.auth-form-login-button{
+  display: block;
+  width: 100%;
+  height: 57px;
+  border: 0 solid transparent;
+  border-radius: 5px;
+  margin-top: 38px;
+  color: rgb(238, 243, 247);
+  background-color: rgb(77 132 223);
+  font-size: 1.2em;
+  font-weight: 640;
+}

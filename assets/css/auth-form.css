@@ -1,16 +1,20 @@
-.auth-form{
-  width: 668px;
-  height: 540px;
-  padding: 55px;
+.main-wrapper{
+  /* 
+    Чіткий фіксований розмір 
+    спеціально, як у зразка 
+  */
+  width: 668px;    
+  height: 540px;   
+  padding: 3.66rem;
   background-color: rgb(255, 255, 255);
 }
-.auth-form-title{
-  margin-bottom: 47px;
+.main-title{
+  margin-bottom: 3.13rem;
   color: rgb(77 132 223);
 }
 .auth-form-text-label{
   display: block;
-  margin-bottom: 14px;
+  margin-bottom: 0.93rem;
   color: rgb(115, 115, 115);
   font-weight: 500;
   letter-spacing: 3.2px;
@@ -20,27 +24,31 @@
   height: 58px;
   border: 0px solid transparent;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 1.33rem;
   background-color: rgb(219, 219, 219);
 }
-/* Замінемо стандартний чекбокс на власний */
-.auth-form-remember-me-checkbox{
-  display: none;
+.auth-form-text-input:focus{
+  outline: 0 solid transparent;
 }
 .additional-form-actions{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -6px;
+  margin-top: -0.4rem;
+  text-transform: capitalize;
 }
-/* Створюємо власний чекбокс */
+/* Приховуємо стандартний сheckbox, */
+.auth-form-remember-me-checkbox{
+  display: none;
+}
+/* Створюємо кастомний чекбокс */
 .auth-form-remember-me-label{
   display: inline-block;
   width: 14px;
   height: 14px;
   border: 1px solid rgb(160, 160, 160);
   border-radius: 3px; 
-  margin: 0 10px 0 0;
+  margin: 0 0.66rem 0 0;
   background-color: rgb(219, 219, 219);
   box-shadow: 1px 1px 2px rgb(255, 255, 255) inset;
   cursor: pointer;
@@ -48,7 +56,7 @@
 }
 /* Cтавимо відмітку сhecked */
 .auth-form-remember-me-checkbox:checked 
-+ .additional-form-actions .auth-form-remember-me-label::before{
++ .auth-form-remember-me-label::before{
   content: "\2713";
   position: absolute;
   top: -3px;
@@ -59,13 +67,13 @@
   content: "Remember Me";
   display: inline-block;
   width: 100px;
-  margin-left: 28px;
+  margin-left: 1.86rem;
   color: rgb(115, 115, 115);
 }
 .auth-form-forgot-password-link{
-  /* хітбокси */
-  padding-top: 5px; 
-  padding-bottom: 5px;
+  /* Хітбокси */
+  padding-top: 0.33rem; 
+  padding-bottom: 0.33rem;
   color: rgb(53, 172, 202);
   font-weight: 610;
 }
@@ -75,9 +83,11 @@
   height: 57px;
   border: 0 solid transparent;
   border-radius: 5px;
-  margin-top: 38px;
+  margin-top: 2.53rem;
   color: rgb(238, 243, 247);
   background-color: rgb(77 132 223);
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: 640;
+  /* Перезаписує стилі браузеру */
+  text-transform: uppercase; 
 }
